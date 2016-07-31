@@ -4,7 +4,7 @@ import com.connexiz.app.domain.Student;
 
 public class StudentService {
 	 
-	public Student getstudent(){
+	public Student getStudent(){
 		
 		Student student =new Student();
 		student.setFirstName("Sajib");
@@ -13,6 +13,16 @@ public class StudentService {
 		return student;
 		
 	}
+	
+	 
+		public void setStudent(Student student){
+			
+			student.setFirstName("Sajib");
+			student.setLastName("Alam");
+			
+			//return student;
+			
+		}
 
 
 }
