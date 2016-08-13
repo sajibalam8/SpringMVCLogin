@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 12, 2016 9:43:28 PM by Hibernate Tools 5.1.0.Beta1 -->
+<hibernate-mapping>
+    <class name="com.connexiz.app.reveng.Course" table="course" catalog="studentdb" optimistic-lock="version">
+        <id name="courseId" type="java.lang.Integer">
+            <column name="courseID" />
+            <generator class="identity" />
+        </id>
+        <property name="courseName" type="string">
+            <column name="courseName" length="20" />
+        </property>
+        <property name="courseSection" type="string">
+            <column name="courseSection" length="20" />
+        </property>
+        <property name="courseSession" type="string">
+            <column name="courseSession" length="20" />
+        </property>
+        <property name="courseTime" type="time">
+            <column name="courseTime" length="8" />
+        </property>
+    </class>
+</hibernate-mapping>

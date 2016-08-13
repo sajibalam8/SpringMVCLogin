@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 12, 2016 9:43:28 PM by Hibernate Tools 5.1.0.Beta1 -->
+<hibernate-mapping>
+    <class name="com.connexiz.app.reveng.CourseStudent" table="course_student" catalog="studentdb" optimistic-lock="version">
+        <composite-id name="id" class="com.connexiz.app.reveng.CourseStudentId">
+            <key-property name="courseId" type="int">
+                <column name="courseID" />
+            </key-property>
+            <key-property name="studentId" type="int">
+                <column name="studentID" />
+            </key-property>
+            <key-property name="grade" type="string">
+                <column name="grade" length="20" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 12, 2016 9:43:28 PM by Hibernate Tools 5.1.0.Beta1 -->
+<hibernate-mapping>
+    <class name="com.connexiz.app.reveng.Teacher" table="teacher" catalog="studentdb" optimistic-lock="version">
+        <id name="teacherId" type="java.lang.Integer">
+            <column name="teacherID" />
+            <generator class="identity" />
+        </id>
+        <property name="firstName" type="string">
+            <column name="firstName" length="20" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="lastName" length="20" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="20" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="20" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="20" />
+        </property>
+        <property name="zipcode" type="string">
+            <column name="zipcode" length="20" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="20" />
+        </property>
+        <property name="username" type="string">
+            <column name="username" length="20" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="20" />
+        </property>
+        <set name="studentTeachers" table="student_teacher" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="teacherID" not-null="true" />
+            </key>
+            <one-to-many class="com.connexiz.app.reveng.StudentTeacher" />
+        </set>
+    </class>
+</hibernate-mapping>
